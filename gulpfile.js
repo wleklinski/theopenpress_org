@@ -16,12 +16,11 @@ var gulp         = require('gulp'),
 /*
  * common directories
  */
-var theme       = 'wp-content/themes/theopenpress'
-    src         = theme + '/src',
+var src         = 'wp-content/themes/theopenpress/src',
     images      = src + '/images',
     stylesheets = src + '/stylesheets',
     scripts     = src + '/scripts',
-    build       = theme + '/assets',
+    build       = 'wp-content/themes/theopenpress/assets',
     img         = build + '/img',
     css         = build + '/css',
     js          = build + '/js';
@@ -32,6 +31,7 @@ var theme       = 'wp-content/themes/theopenpress'
  */
 gulp.task('styles', function() {
   return gulp.src(stylesheets + '/app.scss', {base: stylesheets})
+/*   return gulp.src(stylesheets + '/app.scss', {base: stylesheets}) */
     .pipe(plumber())
     .pipe(sass({style: 'expanded'}))
     .pipe(gulp.dest(css))
