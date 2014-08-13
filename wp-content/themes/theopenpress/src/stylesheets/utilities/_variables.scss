@@ -1,0 +1,39 @@
+/*
+ * colors
+ */
+$color-brown:         #a29a91;
+$color-brown-light:   tint($color-brown, 50%);
+$color-brown-lighter: tint($color-brown, 90%);
+$color-brown-dark:    blend-multiply($color-brown, $color-brown);
+$color-brown-darker:  blend-multiply($color-brown-dark, $color-brown);
+$color-pink:          #ee3f73;
+$color-pink-dark:     blend-multiply($color-pink, $color-brown);
+$color-blue:          #3297c0;
+$color-blue-dark:     blend-multiply($color-blue, $color-brown);
+$color-red:           #ef4036;
+$color-red-dark:      blend-multiply($color-red, $color-brown);
+$color-green:         #69b378;
+$color-green-dark:    blend-multiply($color-green, $color-brown);
+$color-yellow:        #fcbf3f;
+$color-yellow-dark:   blend-multiply($color-yellow, $color-brown);
+
+$color-text:  $color-brown-dark;
+$color-loud:  $color-brown-darker;
+$color-quiet: $color-brown-light;
+$color-ui:    $color-brown-lighter;
+
+$color-facebook:   #3c5a99;
+$color-twitter:    #5fa9dd;
+$color-googleplus: #dd4b39;
+$color-pinterest:  #cb2027;
+
+
+/*
+ * fonts
+ */
+$font-stack-serif:      Times, serif;
+$font-stack-sans-serif: Arial, sans-serif;
+$font-stack-monospace:  Courier, monospace;
+
+$brand-font-serif:      "adobe-garamond-pro";
+$brand-font-sans-serif: "futura-pt";
