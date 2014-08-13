@@ -1,0 +1,36 @@
+/*
+ * serif
+ */
+@mixin serif {
+  font-weight: 400;
+  font-style: normal;
+  font-family: $brand-font-serif, $font-stack-serif;
+}
+
+@mixin serif-italic {
+  font-weight: 400;
+  font-style: italic;
+  font-family: $brand-font-serif, $font-stack-serif;
+}
+
+@mixin serif-bold {
+  font-weight: 700;
+  font-style: normal;
+  font-family: $brand-font-serif, $font-stack-serif;
+}
+
+@mixin serif-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+  font-family: $brand-font-serif, $font-stack-serif;
+}
+
+
+/*
+ * sans serif
+ */
+@mixin sans-serif-bold {
+  font-weight: 700;
+  font-style: normal;
+  font-family: $brand-font-sans-serif, $font-stack-sans-serif;
+}
