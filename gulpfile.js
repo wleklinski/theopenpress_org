@@ -31,7 +31,6 @@ var src         = 'wp-content/themes/theopenpress/src',
  */
 gulp.task('styles', function() {
   return gulp.src(stylesheets + '/app.scss', {base: stylesheets})
-/*   return gulp.src(stylesheets + '/app.scss', {base: stylesheets}) */
     .pipe(plumber())
     .pipe(sass({style: 'expanded'}))
     .pipe(gulp.dest(css))
