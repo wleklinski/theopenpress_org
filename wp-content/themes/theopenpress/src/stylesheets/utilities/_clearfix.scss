@@ -1,0 +1,10 @@
+/*
+ * css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ */
+.cf {
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
