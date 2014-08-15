@@ -37,3 +37,17 @@ $font-stack-monospace:  Courier, monospace;
 
 $brand-font-serif:      "adobe-garamond-pro";
 $brand-font-sans-serif: "futura-pt";
+
+
+/*
+ * base variables
+ */
+$base-font-size:   16px;
+$base-line-height: 24px;
+$base-font-family: $font-stack-serif;
+$base-color-text:  $color-text;
+$base-color-ui:    $color-ui;
+
+$base-spacing-unit: $base-line-height;
+$half-spacing-unit: $base-spacing-unit / 2;
+$line-height-ratio: $base-line-height / $base-font-size;
