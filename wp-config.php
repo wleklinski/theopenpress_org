@@ -15,10 +15,10 @@
  */
 
 /** Change location of core WordPress files */
-define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/theopenpress/wordpress');
-define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME'] . '/theopenpress');
-define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/theopenpress/wp-content');
-define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/theopenpress/wp-content');
+define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/theopenpress_org/wordpress');
+define('WP_HOME',    'http://' . $_SERVER['SERVER_NAME'] . '/theopenpress_org');
+define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/theopenpress_org/wp-content');
+define('WP_CONTENT_URL', 'http://' . $_SERVER['SERVER_NAME'] . '/theopenpress_org/wp-content');
 
 /**
 * Load DB credentials
