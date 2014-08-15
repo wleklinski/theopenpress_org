@@ -1,0 +1,37 @@
+/*------------------------------------*\
+  HEADINGS
+\*------------------------------------*/
+%heading-style {
+  @include sans-serif-bold;
+  text-transform: uppercase;
+}
+h1,
+.alpha {
+  @extend %heading-style;
+  font-size: rem(48);
+}
+h2,
+.beta {
+  @extend %heading-style;
+  font-size: rem(36);
+}
+h3,
+.gamma {
+  @extend %heading-style;
+  font-size: rem(24);
+}
+h4,
+.delta {
+  @extend %heading-style;
+  font-size: rem(21);
+}
+h5,
+.epsilon {
+  @extend %heading-style;
+  font-size: rem(18);
+}
+h6,
+.zeta {
+  @extend %heading-style;
+  font-size: rem(16);
+}
