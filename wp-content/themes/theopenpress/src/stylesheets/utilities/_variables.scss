@@ -44,7 +44,7 @@ $brand-font-sans-serif: "futura-pt";
  */
 $base-font-size:   16px;
 $base-line-height: 24px;
-$base-font-family: $font-stack-serif;
+$base-font-family: $brand-font-serif, $font-stack-serif;
 $base-color-text:  $color-text;
 $base-color-ui:    $color-ui;
 
