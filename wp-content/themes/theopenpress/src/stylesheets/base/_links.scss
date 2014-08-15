@@ -1,0 +1,13 @@
+/*------------------------------------*\
+  LINKS
+\*------------------------------------*/
+a {
+  color: $color-pink;
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-pink-dark;
+  }
+}
