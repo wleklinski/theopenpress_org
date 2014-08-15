@@ -1,4 +1,22 @@
 /*
+ * strip unit
+ */
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+
+/*
+ * convert pixels-to-rem
+ */
+@function rem($value, $base-value: $base-font-size)  {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+
+/*
  * tint & shade
  */
 @function tint($color, $percent){
