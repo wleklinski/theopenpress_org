@@ -1,0 +1,48 @@
+/*------------------------------------*\
+  NAV
+\*------------------------------------*/
+.nav {
+  @extend .cf;
+  margin-left: 0;
+  list-style: none;
+}
+
+
+/*
+ * account nav
+ */
+.account-nav {
+  @extend %heading-style;
+  font-size: rem(13);
+
+  @media only screen and (min-width: 768px) {
+    > li {
+      float: left;
+      margin-left: 1em;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+
+/*
+ * global nav
+ */
+.global-nav {
+  @extend %heading-style;
+  font-size: rem(21);
+
+  @media only screen and (min-width: 768px) {
+    > li {
+      float: left;
+      margin-left: 1em;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

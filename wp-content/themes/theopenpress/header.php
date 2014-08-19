@@ -25,18 +25,58 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'tOP' ); ?></a>
+  <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'tOP' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+  <header id="masthead" class="site-header" role="banner">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+      <img alt="<?php bloginfo( 'name' ); ?>" src="#">
+    </a>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'tOP' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+    <nav id="account-nav" role="navigation">
+      <?php
+      wp_nav_menu( array(
+        'theme_location'  => 'account-nav',
+        'menu'            => '',
+        'container'       => '',
+        'container_class' => '',
+        'container_id'    => '',
+        'menu_class'      => '',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul class="nav account-nav">%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => new Cleaner_Walker_Nav_Menu()
+      ) );
+      ?>
+    </nav><!-- #account-nav -->
 
-	<div id="content" class="site-content">
+    <nav id="global-nav" role="navigation">
+      <?php
+      wp_nav_menu( array(
+        'theme_location'  => 'global-nav',
+        'menu'            => '',
+        'container'       => '',
+        'container_class' => '',
+        'container_id'    => '',
+        'menu_class'      => '',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul class="nav global-nav">%3$s</ul>',
+        'depth'           => 0,
+        'walker'          => new Cleaner_Walker_Nav_Menu()
+      ) );
+      ?>
+    </nav><!-- #global-nav -->
+  </header><!-- #masthead -->
+
+  <div id="content" class="site-content">
