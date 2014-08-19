@@ -70,6 +70,9 @@ function tOP_setup() {
     'default-color' => 'ffffff',
     'default-image' => '',
   ) ) );
+
+  // Hide admin bar when viewing site
+  add_filter('show_admin_bar', '__return_false');
 }
 endif; // tOP_setup
 add_action( 'after_setup_theme', 'tOP_setup' );
