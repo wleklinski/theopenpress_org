@@ -28,3 +28,44 @@
  * objects
  */
 @import "objects/nav";
+
+
+/*
+ * logo
+ */
+.logo {
+  @extend .cf;
+  margin-bottom: rem(16);
+}
+.logo-mark {
+  float: left;
+  width: rem(48);
+  height: rem(48);
+  background: url(../img/logo-mark.svg) no-repeat center center;
+  background-size: 100%;
+  text-indent: -9999em;
+  @media only screen and (min-width: 30em) {
+    width: rem(60);
+    height: rem(60);
+  }
+
+  .no-svg & {
+    background-image: url(../img/logo-mark.png);
+  }
+}
+.logo-type {
+  float: left;
+  width: rem(52);
+  height: rem(48);
+  background: url(../img/logo-type.svg) no-repeat center center;
+  background-size: 100%;
+  text-indent: -9999em;
+  @media only screen and (min-width: 30em) {
+    width: rem(65);
+    height: rem(60);
+  }
+
+  .no-svg & {
+    background-image: url(../img/logo-type.png);
+  }
+}
