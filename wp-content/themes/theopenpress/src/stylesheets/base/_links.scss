@@ -1,13 +1,40 @@
 /*------------------------------------*\
   LINKS
 \*------------------------------------*/
-a {
-  color: $color-pink;
-  text-decoration: none;
+/*
+ * link mixin
+ */
+@mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
+  color: $normal;
 
-  &:hover,
-  &:active,
-  &:focus {
-    color: $color-pink-dark;
+  @if $hover {
+    &:hover { color: $hover; }
+  } @else {
+    &:hover { color: darken($normal, 15%); }
   }
+
+  @if $active {
+    &:active { color: $active; }
+  } @else {
+    &:active { color: darken($normal, 15%); }
+  }
+
+  @if $visited {
+    &:visited { color: $visited; }
+  }
+
+  @if $focus {
+    &:focus { color: $focus; }
+  } @else {
+    &:focus { color: darken($normal, 15%); }
+  }
+}
+
+
+/*
+ * basic link
+ */
+a {
+  @include link-colors($color-pink);
+  text-decoration: none;
 }
