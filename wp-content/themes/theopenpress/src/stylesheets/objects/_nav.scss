@@ -35,10 +35,14 @@
  */
 .global-nav {
   @extend %heading-style;
+  margin-bottom: 0;
   font-size: rem(21);
+  line-height: (24/21);
 
-  @media only screen and (min-width: 768px) {
-    > li {
+  li {
+    margin-bottom: rem(8);
+
+    @media only screen and (min-width: 30em) {
       float: left;
       margin-left: 1em;
 
@@ -47,4 +51,6 @@
       }
     }
   }
+
+  a { @include link-colors($color-text); }
 }
