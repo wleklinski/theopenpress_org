@@ -12,19 +12,21 @@
  * account nav
  */
 .account-nav {
-  @extend %heading-style;
-  font-size: rem(13);
+  margin-bottom: rem(4);
+  font-size: rem(14);
+  font-style: italic;
+  line-height: (16/14);
 
-  @media only screen and (min-width: 768px) {
-    > li {
-      float: left;
-      margin-left: 1em;
+  li {
+    float: left;
+    margin-left: 1em;
 
-      &:first-child {
-        margin-left: 0;
-      }
+    &:first-child {
+      margin-left: 0;
     }
   }
+
+  a { @include link-colors($color-text); }
 }
 
 
