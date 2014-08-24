@@ -104,6 +104,12 @@ function tOP_scripts() {
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }
+
+  if ( !is_admin() ) {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', false, null, true );
+    wp_enqueue_script( 'jquery' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'tOP_scripts' );
 
