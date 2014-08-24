@@ -111,6 +111,8 @@ function tOP_scripts() {
     wp_enqueue_script( 'jquery' );
   }
 
+  wp_enqueue_script( 'tOP-fastclick', get_template_directory_uri() . '/assets/js/fastclick.js', false, null, true );
+
   wp_enqueue_script( 'tOP-app', get_template_directory_uri() . '/assets/js/app.js', false, null, true );
 }
 add_action( 'wp_enqueue_scripts', 'tOP_scripts' );
