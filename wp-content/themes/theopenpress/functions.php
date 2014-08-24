@@ -99,8 +99,6 @@ add_action( 'widgets_init', 'tOP_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tOP_scripts() {
-  wp_enqueue_style( 'tOP-style', get_stylesheet_uri() );
-
   wp_enqueue_style( 'tOP-app', get_template_directory_uri() . '/assets/css/app.css' );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
