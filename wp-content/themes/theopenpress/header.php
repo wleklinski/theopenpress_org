@@ -27,10 +27,12 @@
 <div id="page" class="hfeed site">
   <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'tOP' ); ?></a>
 
-  <header id="masthead" class="site-header" role="banner">
+  <header class="site-banner" role="banner">
     <div class="logo">
       <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><span class="logo-mark"></span><span class="logo-type">The Open Press</span></a>
     </div>
+
+    <button type="button" class="nav-toggle"><span>Toggle Nav</span></button>
 
     <nav id="account-nav" role="navigation">
       <?php
