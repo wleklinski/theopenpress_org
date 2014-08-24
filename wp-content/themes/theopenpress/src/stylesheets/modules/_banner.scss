@@ -1,6 +1,33 @@
 /*------------------------------------*\
   BANNER
 \*------------------------------------*/
+.nav-open {
+  overflow: hidden;
+}
+.site-banner {
+  @include media-query(palm) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: rem(88);
+    padding: rem(20);
+    overflow: hidden;
+    transition:
+      height .25s ease-out,
+      background-color .25s ease-out;
+  }
+
+  .nav-open & {
+    height: 100%;
+    background-color: rgba($color-brown-lighter, .95);
+    @media only screen and (min-width: 30em) {
+      background-color: transparent;
+    }
+  }
+}
+
+
 /*
  * logo
  */
