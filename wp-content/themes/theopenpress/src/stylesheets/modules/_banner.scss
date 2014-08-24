@@ -1,9 +1,22 @@
 /*------------------------------------*\
   BANNER
 \*------------------------------------*/
+/*
+ * logo
+ */
 .logo {
   @extend .cf;
-  margin-bottom: rem(16);
+  margin-bottom: rem(18);
+  @include media-query(palm) {
+    margin-left: rem(-2);
+  }
+
+  .touch .nav-open &,
+  &:hover {
+    .logo-type {
+      opacity: 1;
+    }
+  }
 }
 .logo-mark {
   float: left;
@@ -12,7 +25,8 @@
   background: url(../img/logo-mark.svg) no-repeat center center;
   background-size: 100%;
   text-indent: -9999em;
-  @media only screen and (min-width: 30em) {
+  opacity: .9;
+  @include media-query(lap-and-up) {
     width: rem(60);
     height: rem(60);
   }
@@ -28,7 +42,9 @@
   background: url(../img/logo-type.svg) no-repeat center center;
   background-size: 100%;
   text-indent: -9999em;
-  @media only screen and (min-width: 30em) {
+  opacity: 0;
+  transition: opacity .25s ease-out;
+  @include media-query(lap-and-up) {
     width: rem(65);
     height: rem(60);
   }
