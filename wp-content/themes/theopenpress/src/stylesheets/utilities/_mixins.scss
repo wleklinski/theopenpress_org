@@ -1,0 +1,49 @@
+/*------------------------------------*\
+  MIXINS
+\*------------------------------------*/
+/*
+ * media query
+ */
+$lap-start: 481px;
+$desk-start: 1024px;
+$desk-wide-start: 1200px;
+$palm-end: $lap-start - 1px;
+$lap-end: $desk-start - 1px;
+
+@mixin media-query($media-query) {
+  @if $media-query == palm {
+    @media only screen and (max-width: em($palm-end)) {
+      @content;
+    }
+  }
+
+  @if $media-query == lap {
+    @media only screen and (min-width: em($lap-start)) and (max-width: em($lap-end)) {
+      @content;
+    }
+  }
+
+  @if $media-query == lap-and-up {
+    @media only screen and (min-width: em($lap-start)) {
+      @content;
+    }
+  }
+
+  @if $media-query == mobile {
+    @media only screen and (max-width: em($lap-end)) {
+      @content;
+    }
+  }
+
+  @if $media-query == desk {
+    @media only screen and (min-width: em($desk-start)) {
+      @content;
+    }
+  }
+
+  @if $media-query == desk-wide {
+    @media only screen and (min-width: em($desk-wide-start)) {
+      @content;
+    }
+  }
+}
