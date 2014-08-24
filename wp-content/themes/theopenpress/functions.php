@@ -99,13 +99,21 @@ add_action( 'widgets_init', 'tOP_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tOP_scripts() {
-  wp_enqueue_style( 'tOP-style', get_stylesheet_uri() );
-
   wp_enqueue_style( 'tOP-app', get_template_directory_uri() . '/assets/css/app.css' );
 
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
   }
+
+  if ( !is_admin() ) {
+    wp_deregister_script( 'jquery' );
+    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', false, null, true );
+    wp_enqueue_script( 'jquery' );
+  }
+
+  wp_enqueue_script( 'tOP-fastclick', get_template_directory_uri() . '/assets/js/fastclick.js', false, null, true );
+
+  wp_enqueue_script( 'tOP-app', get_template_directory_uri() . '/assets/js/app.js', false, null, true );
 }
 add_action( 'wp_enqueue_scripts', 'tOP_scripts' );
 

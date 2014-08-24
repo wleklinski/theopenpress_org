@@ -10,7 +10,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer class="site-contentinfo" role="contentinfo">
 		<div class="site-info">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'tOP' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'tOP' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

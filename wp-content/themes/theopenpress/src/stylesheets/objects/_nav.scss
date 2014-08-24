@@ -12,19 +12,23 @@
  * account nav
  */
 .account-nav {
-  @extend %heading-style;
-  font-size: rem(13);
+  margin-bottom: rem(8);
+  font-size: rem(14);
+  font-style: italic;
+  line-height: (16/14);
 
-  @media only screen and (min-width: 768px) {
-    > li {
-      float: left;
-      margin-left: 1em;
+  li {
+    float: left;
+    margin-left: 1em;
 
-      &:first-child {
-        margin-left: 0;
-      }
+    &:first-child {
+      margin-left: 0;
     }
+
+    &.active a { color: $color-brown; }
   }
+
+  a { @include link-colors($color-text); }
 }
 
 
@@ -33,10 +37,20 @@
  */
 .global-nav {
   @extend %heading-style;
+  margin-bottom: 0;
   font-size: rem(21);
+  line-height: (24/21);
+  @media only screen and (min-width: 30em) {
+    font-size: rem(16);
+    line-height: 1;
+  }
 
-  @media only screen and (min-width: 768px) {
-    > li {
+  li {
+    margin-bottom: rem(8);
+
+    &.active a { color: $color-brown; }
+
+    @media only screen and (min-width: 30em) {
       float: left;
       margin-left: 1em;
 
@@ -45,4 +59,6 @@
       }
     }
   }
+
+  a { @include link-colors($color-text); }
 }
