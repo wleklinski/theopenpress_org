@@ -80,3 +80,74 @@
     background-image: url(../img/logo-type.png);
   }
 }
+
+
+/*
+ * nav toggle
+ */
+.nav-toggle {
+  position: fixed;
+  top: rem(20);
+  right: rem(12);
+  width: rem(48);
+  height: rem(48);
+  padding: 0;
+  text-indent: -9999em;
+  background-color: transparent;
+  border: none;
+  @include media-query(lap-and-up) {
+    display: none;
+  }
+
+  span {
+    position: relative;
+    display: block;
+    width: rem(32);
+    height: rem(1);
+    margin: 0 auto;
+    background-color: $color-text;
+    transition: .25s ease-in;
+
+    .nav-open & {
+      background-color: transparent;
+    }
+
+    &,
+    &:before,
+    &:after {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      width: 100%;
+      height: rem(1);
+      background-color: $color-text;
+      content: " ";
+      transition: .25s ease-out;
+
+      .nav-open & {
+        top: 0;
+      }
+    }
+
+    &:before {
+      top: -1000%;
+
+      .nav-open & {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &:after {
+      bottom: -1000%;
+
+      .nav-open & {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
